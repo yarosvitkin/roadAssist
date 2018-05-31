@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css?family=Mina');
+.main-div {
+  width: 35%;
+  z-index: 1;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 100%;
+  position: absolute;
+  /* background: linear-gradient(to bottom, #4A5A8A, #1F2439);  */
+  background: url('./img/road.png') #1F2439;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  margin: 0px;
+}
+
+input, button {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  color: whitesmoke;
+  outline: none;
+}
+
+.main-div button {
+  background: linear-gradient(to right, #F565B0, #8399FE);
+  color: #fff;
+  border: #1F2439;
+  border-radius: 25px;
+  padding: 15px;
+  display: block;
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 20px;
+  box-shadow: 2px 3px 3em #4A5A8A;
+  outline: none;
+  font-size: 18px;
+  font-family: 'Mina', sans-serif;
+}
+
+.main-div input {
+  box-shadow: 2px 3px 3em #4A5A8A;
+  background: linear-gradient(to bottom, #4A5A8A, #1F2439);
+  border: #1F2439;
+  border-radius: 25px;
+  padding: 15px;
+  width: 70%;
+  height: 50%;
+  margin-bottom: 20px;
+  margin-left: 15%;
+  color: whitesmoke;
+  outline: none;
+}
+#searchField{
+  box-shadow: 2px 3px 3em #4A5A8A;
+  background: linear-gradient(to bottom, #4A5A8A, #1F2439);
+  border: #1F2439;
+  border-radius: 25px;
+  padding: 15px;
+  width: 70%;
+  height: 50%;
+  margin-bottom: 20px;
+  margin-left: 15%;
+  color: whitesmoke;
+  outline: none;
+}
+
+#map {
+  width: 65%;
+  height: 100%;
+  background-color: grey;
+  z-index: 100;
+  position: absolute;
+  margin-left: 35%;
+  padding: 0px;
+}
+
+input:hover {
+  background: #4A5A8A;
+  border-color: black;
+  -webkit-transition: border-color 1s, background-color 1s;
+  outline: none;
+}
+
+button:hover {
+  background: linear-gradient(to right, #8399FE, #F565B0);
+  -webkit-transition: background-color 2s;
+  color: black;
+  border-color: black;
+}
+
+#user_div {
+  display: none;
+}
+
+#registration {
+  display: none;
+}
+
+#image {
+  margin-left: 25%;
+  margin-bottom: 10px;
+}
+
+#reports {
+  display: none;
+  font-size: 18px;
+  font-family: 'Mina', sans-serif;
+  color: whitesmoke;
+}
+
+#search {
+  display: none;
+  font-size: 18px;
+  font-family: 'Mina', sans-serif;
+  color: whitesmoke;
+  margin-top: 10px;
+  font-weight: 300;
+}
+
+#serchResultDiv {
+  display: none;
+  font-size: 18px;
+  font-family: 'Mina', sans-serif;
+  color: whitesmoke;
+  margin-top: 10px;
+  font-weight: 300;
+}
+
+#notFound {
+  display: none;
+  font-size: 18px;
+  font-family: 'Mina', sans-serif;
+  color: whitesmoke;
+  margin-top: 10px;
+  font-weight: 300;
+}
+
+#addPoint {
+  display: none;
+  font-family: 'Mina', sans-serif;
+  color: whitesmoke;
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+#addPoint .check, input {
+  width: 16px;
+  height: 16px;
+}
+
+#inputs .pointInput {
+  margin-left: 10px;
+  width: 100%;
+  font-weight: 300;
+}
+#searchByUser ,#searchByGarage{
+  margin:24px;
+  width: 40%;
+}

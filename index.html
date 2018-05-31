@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Administrator</title>
+  <link rel="shortcut icon" href="/img/markers/drawable-xxxhdpi/car.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBFB3BqSYAtUhLsdSjnKR7KNqdmQvxEKDQ",
+      authDomain: "road-assistance-1.firebaseapp.com",
+      databaseURL: "https://road-assistance-1.firebaseio.com",
+      projectId: "road-assistance-1",
+      storageBucket: "road-assistance-1.appspot.com",
+      messagingSenderId: "123481657008"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="getData.js"></script>
+
+
+
+</head>
+
+<body>
+
+
+
+
+  <div id="map"></div>
+
+  <div class="main-div">
+
+    <div id="input">
+      <div id="image"><img src="/img/logo.png"></div>
+      <input type="email" placeholder="email" id="email_field" />
+      <input type="password" placeholder="password" id="password_field" />
+      <div id="buttons">
+        <button id="login" onclick="login()">Log in <i class="fas fa-sign-in-alt"></i></button>
+        <button id="email" onclick="newUser()">Sign in <i class="fas fa-user-plus">  </i></button>
+      </div>
+
+
+    </div>
+
+    <div id="user_div" class="loggedin-div">
+      <button id="reportsBtn" onclick="reports()">Reports <i class="fas fa-ban"></i></button>
+      <button id="searchBtn" onclick="search()">Search <i class="fas fa-search"></i></button>
+      <button id="addPointBtn" onclick="addPoint()">Add point <i class="fas fa-map-marker"></i></button>
+      <button id="logout" onclick="logout()">Logout <i class="fas fa-sign-in-alt"></i></button>
+    </div>
+
+
+    <div id="registration">
+      <input type="email" placeholder="Please type your email" id="new_email" />
+      <input type="password" placeholder="Type your password" id="new_pass" />
+      <button id="reg" onclick="registrate()">Confirm</button>
+    </div>
+
+
+
+    <div id="reports" class="container-fluid">
+      <div class="row">
+        <p class="col-sm-4" id="userFromEmail"></p>
+        <p class="col-sm-4" id="userToEmail"></p>
+        <p class="col-sm-4" id="description"></p>
+      </div>
+      <button class="back" onclick="back()">Back</button>
+    </div>
+
+    <div id="search">
+      <input type="text" placeholder="Search" id="search_field" />
+      <div class="row">
+        <button class="col-sm-6" id="searchByGarage" onclick="startSearchByGarage()">Garages <i class="fas fa-search"></i></button>
+        <button class="col-sm-6" id="searchByUser" onclick="startSearchByUser()">Users <i class="fas fa-search"></i></button>
+      </div>
+      <button class="back" onclick="back()">Back</button>
+    </div>
+
+
+    <div id="serchResultDiv">
+      <div class="row">
+        <p class="col-sm-4" id="searchPhone"></p>
+        <p class="col-sm-4" id="searchName"></p>
+        <p class="col-sm-4" id="searchAddress"></p>
+      </div>
+      <button class="back" onclick="back()">Back</button>
+    </div>
+
+    <div id="addPoint" class="container-fluid">
+      <div class="row">
+        <div id="inputs" class="col-sm-6">
+          <input class="pointInput" type="text" id="companyName" placeholder="Сompany name">
+          <input class="pointInput" id="companyLat" placeholder="Latitude">
+          <input class="pointInput" id="companyLong" placeholder="Longitude">
+          <input class="pointInput" id="companyPhone" placeholder="Phone">
+          <input class="pointInput" id="companyEmail" placeholder="Email">
+          <input class="pointInput" id="companyAddress" placeholder="Address">
+
+
+
+        </div>
+
+
+        <div id="checkBoxes" class="col-sm-6">
+          <p>Type of service</p>
+          <input class="check" type="checkbox" id="carRentalCompany" value="carRentalCompany">Rental company <br>
+          <input class="check" type="checkbox" id="carWash" value="carWash">Wash <br>
+          <input class="check" type="checkbox" id="carService" value="carService">Service <br>
+          <input class="check" type="checkbox" id="carInsuranceCompany" value="carInsuranceCompany">Insurance company <br>
+          <input class="check" type="checkbox" id="Shabbat">Shabbat <br>
+
+        </div>
+      </div>
+
+      <button id="submit" onclick="submitPointToDatabase()">Submit</button>
+      <button class="back" onclick="back()">Back</button>
+
+
+
+
+    </div>
+
+
+
+
+  </div>
+  <script src="auth.js"></script>
+  <script defer src="buttons.js"></script>
+  <script defer src="map.js"></script>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHOK-sTHFV0BcuBCPvEPtcVLOfv9nS8a8">
+  </script>
+
+</body>
+
+</html>
